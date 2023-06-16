@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Cake Lab</title>
+<link rel="stylesheet" href="style_main.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Jacques+Francois' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="header">
+    <div id="logo" ><img src="src/logo.png" alt="Логотип"></div>
+    <a href="main.html" class="header_group">Главная</a>
+    <a href="construct.html" class="header_group" id="chosen">Конструктор</a>
+    <a href="about.html" class="header_group">О нас</a>
+    <a href="personal.html" class="header_group" id="personal_cabinet">Личный кабинет</a>
+</div>
+<div class="main_container">
+    <h1>Оплата</h1>
+    <div class="order payment">
+        <div class="number one">①</div>
+        <div class="mild_rose"></div>
+        <div class="number two">②</div>
+        <div class="middle_rose"></div>
+        <div class="number three">③</div>
+        <div class="fields">
+            <h1>Способ оплаты</h1>
+            
+            <div>
+                <div class="options_row"><input type="radio"  id="two" class="layer" name="layer" value="2" style="vertical-align:middle;margin: 10px;">Наличными
+                    <div class="options_row"><input type="radio"  id="one" class="layer" name="layer" value="3" style="vertical-align:middle;margin:10px;">Картой онлайн
+                    <div class="options_row"><input type="radio"  id="two" class="layer" name="layer" value="2" style="vertical-align:middle;margin: 10px;">Картой при получении
+                    
+                </div></div></div>
+            </div>
+            <div>Доступные купоны</div>
+            <div onclick="this.className = (this.className == 'pink' ? 'coupon__active' : 'pink')" class="pink">
+            <div >Купон на 20% скидку при заказе от 5000 &#8381;</div>
+            <div id="small">действителен до 31.06.23</div>
+            </div>
+            <div id="small">Нажмите, чтобы выбрать</div>
+            <div id="nextdesign" class="button"><a href="#end_order">Подтвердить</a></div>
+        </div>
+        <div id="back" class="button"><a href="delivery.html">Назад</a></div>
+    </div>
+</div>
+
+<div class="modal" id="end_order" aria-hidden="true">
+    <div class="modal-dialog end_order">
+      <div class="modal-body">
+      <div>Ваш заказ почти готов</div>
+      <div>Остался последний шаг</div>
+<div id="endbtn" class="button"><a href="#login">Перейти в личный кабинет</a></div>
+<div id="endbtn" class="button"><a href="#close">Вернуться к оформлению</a></div>
+  </div>
+</div>
+</div>
+
+<div class="modal" id="login" aria-hidden="true">
+    <div class="modal-dialog login">
+      <div class="login_not_chosen"><a href="#enter">Вход</a></div>
+      <div class="login_chosen">Регистрация</div>
+      <div class="login-fields">
+        <p>Электронная почта</p>
+        <div id="input">
+          <input type="text" class="center" placeholder="ksenia@mail.ru">
+        </div>
+      </div>
+      <div class="login-fields">
+        <p>Имя</p>
+        <div id="input">
+          <input type="text" class="center" placeholder="Липаева">
+        </div>
+      </div>
+      <div class="login-fields">
+        <p>Фамилия</p>
+        <div id="input">
+          <input type="text" class="center" placeholder="Ксения">
+        </div>
+      </div>
+      <div class="login-fields">
+        <p>Пароль</p>
+        <div id="input" >
+          <input type="password" maxlength="25" size="40" name="password" class="center">
+        </div>
+      </div>
+      <div class="login-fields">
+        <p>Повторите пароль</p>
+        <div id="input" >
+          <input type="password" maxlength="25" size="40" name="password" class="center">
+        </div>
+      </div>
+      <div id="loginbtn" class="button"><a href="personal.html">Зарегистрироваться</a></div>
+    </div>
+  </div>
+<div class="modal" id="enter" aria-hidden="true">
+    <div class="modal-dialog enterw">
+      <div class="login_chosen">Вход</div>
+      <div class="login_not_chosen"><a href="#login">Регистрации</a></div>
+      <div class="login-fields">
+        <p>Электронная почта</p>
+        <div id="input">
+          <input type="text" class="center" placeholder="ksenia@mail.ru">
+        </div>
+      </div>
+      <div class="login-fields">
+        <p>Пароль</p>
+        <div id="input" >
+          <input type="password" maxlength="25" size="40" name="password" class="center">
+        </div>
+      </div>
+      <div id="loginbtn" class="button"><a href="personal.html">Войти</a></div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Cake Lab</title>
+<link rel="stylesheet" href="style_main.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Jacques+Francois' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="header">
+    <div id="logo" ><img src="src/logo.png" alt="Логотип"></div>
+    <!--<div class="header_group" id="chosen">Главная</div>
+    <div class="header_group">Конструктор</div>
+    <div class="header_group">О нас</div>
+    <div class="header_group" id="personal_cabinet">Личный кабинет</div>-->
+    <a href="main.html" class="header_group" >Главная</a>
+    <a href="construct.html" class="header_group" id="chosen">Конструктор</a>
+    <a href="about.html" class="header_group">О нас</a>
+    <a href="personal.html"class="header_group" id="personal_cabinet">Личный кабинет</a>
+</div>
+<div class="main_container">
+    <h1>Выбор дизайна</h1>
+    <div class="design_choice">
+        <div><a href="#modal" class="btn"><img src="src/skrepka.png" alt="Прикрепить референс">Прикрепить референс</a></div>
+        <div><a href="#modal1" class="btn"><img src="src/sheet.png" alt="Прикрепить описание">Прикрепить описание</a></div>
+        <div><a href="#modal2" class="btn"><img src="src/glass.png" alt="Выбрать из библиотеки">Выбрать из библиотеки</a></div>
+    </div>
+    </div>
+    
+    
+    <div class="modal" id="modal" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-header">
+            <a href="#close" class="btn-close" aria-hidden="true">х</a>
+          </div>
+          
+          <link rel="stylesheet" href="components.css">
+          <div class="modal-body">
+            <h1>Прикрепите свой референс (изображение или видео)</h1>
+            <div class="upload"><input type="file"></div>
+            <div id="nextdesign_alt" class="button"><a href="place_order.html">Подтвердить</a></div>
+          </div></div></div></div>
+
+
+    <div class="modal" id="modal1" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-header">
+                <a href="#close" class="btn-close" aria-hidden="true">х</a>
+              </div>
+              <div class="modal-body">
+              <link rel="stylesheet" href="components.css">
+              <h1>Каким вы видите дизайн своего торта?</h1>
+    <div class="describe"><textarea name="comment" cols="40" rows="3"></textarea></div>
+    <div id="nextdesign_alt" class="button"><a href="place_order.html">Подтвердить</a></div>
+          </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal2" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-header">
+                    <a href="#close" class="btn-close" aria-hidden="true">х</a>
+                  </div>
+                  <link rel="stylesheet" href="components.css">
+                  
+                  <h1>Каким вы видите дизайн своего торта?</h1>
+                  <div class="lib">
+                  <div><img onclick="this.className = (this.className == 'img' ? 'img__active' : 'img')" class="img" src="src/cake_1.png" alt="Торт"></div>
+                  <div><img onclick="this.className = (this.className == 'img' ? 'img__active' : 'img')" class="img" src="src/cake_2.png" alt="Торт"></div>
+                  <div><img onclick="this.className = (this.className == 'img' ? 'img__active' : 'img')" class="img" src="src/cake_3.png" alt="Торт"></div>
+                  <div><img onclick="this.className = (this.className == 'img' ? 'img__active' : 'img')" class="img" src="src/cake_4.png" alt="Торт"></div>
+                  <div><img onclick="this.className = (this.className == 'img' ? 'img__active' : 'img')" class="img" src="src/cake_5.png" alt="Торт"></div>
+                  <div><img onclick="this.className = (this.className == 'img' ? 'img__active' : 'img')" class="img" src="src/cake_6.png" alt="Торт"></div>
+                  <div><img onclick="this.className = (this.className == 'img' ? 'img__active' : 'img')" class="img" src="src/cake_7.png" alt="Торт"></div>
+                  <div><img onclick="this.className = (this.className == 'img' ? 'img__active' : 'img')" class="img" src="src/cake_8.png" alt="Торт"></div>
+                  <div><img onclick="this.className = (this.className == 'img' ? 'img__active' : 'img')" class="img" src="src/cake_9.png" alt="Торт"></div>
+                  </div>
+                  <div id="nextdesign_alt" class="button"><a href="place_order.html">Подтвердить</a></div>
+                </div>
+        </div>
+        
+        <div id="backdesign" class="button"><a href="construct.html">Назад</a></div>
+        
+    </div>
+  </div>
+
+
+
+              
+            </div></div></div></div>
+
+
+
+      
+</body>
+</html>

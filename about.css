@@ -1,0 +1,72 @@
+/*настройки хэдера*/
+.header{
+    background-color: #FFEBEE;
+    display: flex;
+    height:160px;
+    width:100%;
+}
+
+.header_group{
+    background-color: #F8BBD0;
+    height: 120px;
+    width: 13%;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 7px;
+    font-family: Raleway, Calibri;
+}
+
+#chosen{
+    background-color: #F48FB1;
+}
+
+#logo{
+    height:83px;
+    margin-left: 60px;
+    margin-top:38px;
+    margin-right:54px;
+    padding: 0px;
+    font-size: 30px;
+}
+
+#personal_cabinet{
+    margin-left: auto;
+}
+
+a {
+    text-decoration: none;
+  }
+
+
+.information{
+    margin-left: 60px;
+    margin-top: 31px;
+    height: 300px;
+    width: 811px;
+    background-color: #FFEBEE;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+}
+
+.information > h1{
+    font-family: Raleway;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 16px;
+    margin-top: 28px;
+    height: 40px;
+}
+
+.information > p{
+    font-family: Raleway;
+    font-size: 30px;
+    font-weight: 400;
+    margin-left: 16px;
+    line-height: 5px;
+}

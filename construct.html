@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Cake Lab</title>
+<link rel="stylesheet" href="style_main.css">
+<script src="code.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Jacques+Francois' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body> 
+  <div class="header">
+    <div id="logo" ><img src="src/logo.png" alt="Логотип"></div>
+    <!--<div class="header_group" id="chosen">Главная</div>
+    <div class="header_group">Конструктор</div>
+    <div class="header_group">О нас</div>
+    <div class="header_group" id="personal_cabinet">Личный кабинет</div>-->
+    <a href="main.html" class="header_group">Главная</a>
+    <a href="construct.html" class="header_group"  id="chosen">Конструктор</a>
+    <a href="about.html" class="header_group">О нас</a>
+    <a href="personal.html" class="header_group" id="personal_cabinet">Личный кабинет</a>
+</div>
+<div class="main_container">
+<div class="grid">
+
+  <div>
+        <p>Корж (верх)</p>
+        <div class="dropdown">  
+  <select onchange="document.getElementById('preview').src = this.value"> 
+    
+    <option value="src/chocolate.jpg">Шоколадный</option> 
+    <option value="src/vanilla.jpg">Ванильный</option> 
+    <option value="src/red velvet.jpg">Красный бархат</option> 
+    <option value="src/almond.png">Миндальный</option> 
+  </select> 
+</div>
+</div>
+  
+
+    <!--<div>
+        <p>Корж (верх)</p>
+        <div class="dropdown">  
+          <select>      
+              <option value="Прямоугольник">Шоколадный</option>
+              <option value="Круг">Ванильный</option>
+              <option value="Квадрат">Красный бархат</option>
+              <option value="Квадрат">Миндальный</option>
+            </select>
+          </div>
+    </div>-->
+    <div>
+        <p>Форма коржей</p>
+        <div class="dropdown">  
+              <select>      
+                  <option value="Прямоугольник">Прямоугольник</option>
+                  <option value="Круг">Круг</option>
+                  <option value="Квадрат">Квадрат</option>
+                </select>
+              </div>
+    </div>
+
+    
+
+    <div class="cake">
+        <p>Пример разреза</p>
+        <img id="preview" src=src/chocolate.JPG >
+        <!--<img id="cake" src="src/chocolate.JPG" alt="Логотип">-->
+        <img id="filling1"src="src/raspberry.jpg">
+        <img id="layer_center" src=src/chocolate.jpg>
+        <img id="filling2" src="src/raspberry.jpg">
+        <img id="layer_down" src=src/chocolate.jpg>
+    </div>
+
+    
+    
+    <div>
+        <p>Начинка</p>
+        <div class="dropdown">  
+          <select onchange="document.getElementById('filling1').src = this.value"> 
+  
+              <option value="src/raspberry.jpg">Малина</option>
+              <option value="src/caramel.jpg">Солёная карамель</option>
+              <option value="src/choc.jpg">Шоколад</option>
+              <option value="src/strawberry.jpg">Клубника</option>
+            </select>
+          </div>
+    </div>
+    <div>
+        <p>Количество слоёв</p>
+        <div id="layer_count">
+            <div>
+            <input type="radio" onClick="twolayer();" id="two" class="layer" name="layer" value="2" style="vertical-align:middle;margin:10px;"><label for="two"><a href="construct_two.html">2</a></label>
+            <script type="text/javascript" language="JavaScript">
+              function twolayer()
+              {
+                 window.open("construct_two.html","_self");
+               }
+          </script> 
+          </div>
+      
+          <div>
+            <input type="radio" onClick="threelayer();" id="three" class="layer" name="layer" value="3" style="vertical-align:middle;margin:10px;" checked><label for="two">3</label>
+            <script type="text/javascript" language="JavaScript">
+              function threelayer()
+              {
+                 window.open("construct.html","_self");
+               }
+          </script> 
+          </div>
+        </div>
+    </div>
+    
+          <div>
+            <p>Корж (центр)</p>
+            <div class="dropdown">  
+      <select onchange="document.getElementById('layer_center').src = this.value"> 
+        
+        <option value="src/chocolate.jpg">Шоколадный</option> 
+        <option value="src/vanilla.jpg">Ванильный</option> 
+        <option value="src/red velvet.jpg">Красный бархат</option> 
+        <option value="src/almond.png">Миндальный</option> 
+      </select> 
+    </div>
+    </div>
+
+      <div><p>Количество гостей</p>
+        <div class="wrapper">
+          <span class="minus">-</span>
+          <span class="num">01</span>
+          <span class="plus">+</span>
+        </div>
+        <script>
+         const plus = document.querySelector(".plus"),
+          minus = document.querySelector(".minus"),
+          num = document.querySelector(".num");
+          let a = 1;
+          plus.addEventListener("click", ()=>{
+            a++;
+            a = (a < 10) ? "0" + a : a;
+            num.innerText = a;
+          });
+          minus.addEventListener("click", ()=>{
+            if(a > 1){
+              a--;
+              a = (a < 10) ? "0" + a : a;
+              num.innerText = a;
+            }
+          });
+        </script></div>
+   <div>
+    <p>Начинка</p>
+    <div class="dropdown">  
+      <select onchange="document.getElementById('filling2').src = this.value"> 
+
+          <option value="src/raspberry.jpg">Малина</option>
+          <option value="src/caramel.jpg">Солёная карамель</option>
+          <option value="src/choc.jpg">Шоколад</option>
+          <option value="src/strawberry.jpg">Клубника</option>
+        </select>
+      </div>
+</div>
+    <div class="empty"></div>
+    <div>
+      <p>Корж (низ)</p>
+      <div class="dropdown">  
+<select onchange="document.getElementById('layer_down').src = this.value"> 
+  
+  <option value="src/chocolate.jpg">Шоколадный</option> 
+  <option value="src/vanilla.jpg">Ванильный</option> 
+  <option value="src/red velvet.jpg">Красный бархат</option> 
+  <option value="src/almond.png">Миндальный</option> 
+</select> 
+</div>
+</div>
+    <div id="next" class="button"><a href="design.html">Далее</a></div>
+  </div>
+</div>
+</body>

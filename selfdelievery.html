@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Cake Lab</title>
+<link rel="stylesheet" href="style_main.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Jacques+Francois' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="header">
+    <div id="logo" ><img src="src/logo.png" alt="Логотип"></div>
+    <a href="main.html" class="header_group">Главная</a>
+    <a href="construct.html" class="header_group" id="chosen">Конструктор</a>
+    <a href="about.html" class="header_group">О нас</a>
+    <a href="personal.html" class="header_group" id="personal_cabinet">Личный кабинет</a>
+</div>
+<div class="main_container">
+    <h1>Доставка</h1>
+    <div class="order delivery">
+        <div class="number one">①</div>
+        <div class="mild_rose"></div>
+        <div class="number two">②</div>
+        <div class="fields">
+            <h1>Способ доставки</h1>
+        
+            <div class="options_row"><input type="radio"  id="two" class="layer" name="layer" value="2" style="vertical-align:middle;margin: 10px;" checked>самовывоз
+                <div class="options_row"><input type="radio" onClick="selfdel();"  id="one" class="layer" name="layer" value="3" style="vertical-align:middle;margin:10px;">курьер
+                    <script type="text/javascript" language="JavaScript">
+                        function del()
+                        {
+                           window.open("delivery.html","_self");
+                         }
+                    </script> 
+                </div>
+            </div>
+            <div>Выберите пункт самовывоза</div>
+            <div class="place_delievery">  
+
+
+
+                <select onchange="document.getElementById('map').src = this.value"> 
+  
+                    <option value="src/raspberry.jpg">Санкт-Петербург, ул.Кораблестроителей, д.37</option>
+                    <option value="src/caramel.jpg">Москва, ул. Фитаревская, д.19</option>
+                    <option value="src/choc.jpg"> Орёл, Наугорское шоссе, д.5</option>
+                  </select>
+
+
+                <div class="map" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/ulitsa_korablestroiteley_37/Z0kYdAVmTUAOQFtjfXV0dXxiZQ==/?ll=30.226458%2C59.954011&utm_medium=mapframe&utm_source=maps&z=16.73" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Кораблестроителей, 37 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=30.226458%2C59.954011&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNzU1NDA1ODU4El7QoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDRg9C70LjRhtCwINCa0L7RgNCw0LHQu9C10YHRgtGA0L7QuNGC0LXQu9C10LksIDM3IgoNyM_xQRXo0G9C&z=16.73" width="550" height="200" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>   
+        </div>
+        <div id="back" class="button"><a href="place_order.html">Назад</a></div>
+        <div id="next" class="button"><a href="payment.html">Далее</a></div>
+    </div>
+</div>
+</body>
+</html>

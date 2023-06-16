@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Cake Lab</title>
+<link rel="stylesheet" href="style_main.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Jacques+Francois' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="header">
+    <div id="logo" ><img src="src/logo.png" alt="Логотип"></div>
+    <a href="main.html" class="header_group">Главная</a>
+    <a href="construct.html" class="header_group" id="chosen">Конструктор</a>
+    <a href="about.html" class="header_group">О нас</a>
+    <a href="personal.html" class="header_group" id="personal_cabinet">Личный кабинет</a>
+</div>
+<div class="main_container">
+    <h1>Доставка</h1>
+    <div class="order delivery">
+        <div class="number one">①</div>
+        <div class="mild_rose"></div>
+        <div class="number two">②</div>
+        <div class="fields">
+            <h1>Способ доставки</h1>
+            
+<div class="options_row"><input type="radio" onClick="selfdel();"  id="two" class="layer" name="layer" value="2" style="vertical-align:middle;margin: 10px;" >самовывоз
+    <script type="text/javascript" language="JavaScript">
+        function selfdel()
+        {
+           window.open("selfdelievery.html","_self");
+         }
+    </script> 
+    <div class="options_row"><input type="radio"  id="one" class="layer" name="layer" value="3" style="vertical-align:middle;margin:10px;" checked>курьер
+
+            
+                </div>
+            </div>
+            <div>Адрес  <input type="text" placeholder="Москва"></div>
+            <div>Выберите дату и время доставки</div>
+            <div><input type="date"></div>
+            <div> с <input type="time" placeholder="12"> до <input type="time" placeholder="13"></div>
+                
+        </div>
+        <div id="back" class="button"><a href="place_order.html">Назад</a></div>
+        <div id="next" class="button"><a href="payment.html">Далее</a></div>
+    </div>
+</div>
+</body>
+</html>

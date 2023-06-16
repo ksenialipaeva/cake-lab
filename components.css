@@ -1,0 +1,53 @@
+:root {
+  --mild-pink: #FFEBEE;
+  --middle-pink: #F8BBD0;
+  --vivid-pink: #F48FB1;
+}
+
+.lib {
+    max-width: 900px; 
+    height:85vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 1000px;
+    border-radius: 20px;
+}
+
+.lib > div{
+  border-radius: 5px;
+  display: flex;
+  justify-self: center;
+  
+}
+
+
+
+h1 {
+font-family: Raleway;
+font-size: 30px;
+font-weight: 600;
+margin-top: 28px;
+height: 40px;
+}
+
+.upload{
+  width: 100%;
+  height: 350px;
+  background-color: var(--mild-pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload > input{
+  font-size: 22px;
+  font-family: Raleway;
+}
+
+.describe > textarea{
+  width: 100%;
+  height: 378px;
+  background-color: var(--mild-pink);
+  border: none;
+}
