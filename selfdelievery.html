@@ -35,21 +35,40 @@
                     </script> 
                 </div>
             </div>
-            <div>Выберите пункт самовывоза</div>
-            <div class="place_delievery">  
+        <style>
+        .inv {
+            display: none;
+        }
+            </style>
+            
+                <select id="target">
+                    <option value="">Select...</option>
+                    <option value="content_1">Санкт-Петербург, ул.Кораблестроителей, д.37</option>
+                    <option value="content_2">Москва, ул. Фитаревская, д.19</option>
+                    <option value="content_3">Наугорское шоссе, д.5</option>
+                </select>
+        
+                <div id="content_1" class="inv"style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/ulitsa_korablestroiteley_37/Z0kYdAVmTUAOQFtjfXV0dXxiZQ==/?ll=30.226458%2C59.954011&utm_medium=mapframe&utm_source=maps&z=16.73" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Кораблестроителей, 37 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=30.226458%2C59.954011&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNzU1NDA1ODU4El7QoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDRg9C70LjRhtCwINCa0L7RgNCw0LHQu9C10YHRgtGA0L7QuNGC0LXQu9C10LksIDM3IgoNyM_xQRXo0G9C&z=16.73" width="550" height="200" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>   
+                <div id="content_2"class="inv" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/213/moscow/house/fitaryovskaya_ulitsa_19/Z04YcgBpSk0CQFtvfXl3dHVgZQ==/?ll=37.479385%2C55.565931&utm_medium=mapframe&utm_source=maps&z=16.69" style="color:#eee;font-size:12px;position:absolute;top:14px;">Фитарёвская улица, 19 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=37.479385%2C55.565931&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgk3NzI0MTM1MzUSZtCg0L7RgdGB0LjRjywg0JzQvtGB0LrQstCwLCDQv9C-0YHRkdC70L7QuiDQmtC-0LzQvNGD0L3QsNGA0LrQsCwg0KTQuNGC0LDRgNGR0LLRgdC60LDRjyDRg9C70LjRhtCwLCAxOSIKDePqFUIVhENeQg%2C%2C&z=16.69" width="550" height="200" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                <div id="content_3" class="inv"style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/10/orel/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Орёл</a><a href="https://yandex.ru/maps/10/orel/house/naugorskoye_shosse_5/Z08YdgNpS0YGQFtofXV5cX9mbQ==/?ll=36.049231%2C52.980359&utm_medium=mapframe&utm_source=maps&z=16.69" style="color:#eee;font-size:12px;position:absolute;top:14px;">Наугорское шоссе, 5 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=36.049231%2C52.980359&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzE3NjgxNRI60KDQvtGB0YHQuNGPLCDQntGA0ZHQuywg0J3QsNGD0LPQvtGA0YHQutC-0LUg0YjQvtGB0YHQtSwgNSIKDWoyEEIV4-tTQg%2C%2C&z=16.69" width="550" height="200" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                
+                <script>
+                    document
+                        .getElementById('target')
+                        .addEventListener('change', function () {
+                            'use strict';
+                            var vis = document.querySelector('.vis'),   
+                                target = document.getElementById(this.value);
+                            if (vis !== null) {
+                                vis.className = 'inv';
+                            }
+                            if (target !== null ) {
+                                target.className = 'vis';
+                            }
+                    });
+                </script>
+</div>
 
-
-
-                <select onchange="document.getElementById('map').src = this.value"> 
-  
-                    <option value="src/raspberry.jpg">Санкт-Петербург, ул.Кораблестроителей, д.37</option>
-                    <option value="src/caramel.jpg">Москва, ул. Фитаревская, д.19</option>
-                    <option value="src/choc.jpg"> Орёл, Наугорское шоссе, д.5</option>
-                  </select>
-
-
-                <div class="map" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/ulitsa_korablestroiteley_37/Z0kYdAVmTUAOQFtjfXV0dXxiZQ==/?ll=30.226458%2C59.954011&utm_medium=mapframe&utm_source=maps&z=16.73" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Кораблестроителей, 37 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=30.226458%2C59.954011&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNzU1NDA1ODU4El7QoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDRg9C70LjRhtCwINCa0L7RgNCw0LHQu9C10YHRgtGA0L7QuNGC0LXQu9C10LksIDM3IgoNyM_xQRXo0G9C&z=16.73" width="550" height="200" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>   
-        </div>
         <div id="back" class="button"><a href="place_order.html">Назад</a></div>
         <div id="next" class="button"><a href="payment.html">Далее</a></div>
     </div>

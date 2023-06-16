@@ -890,3 +890,8 @@ input[type=password] {
     text-align: center;
     font-size: 1.4em;
   }
+
+  #target{
+    margin-bottom: 20px;
+    width: 75%;
+  }
