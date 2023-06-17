@@ -732,7 +732,18 @@ padding-left: 5px;
   grid-column: 2/span 2;;
 }
 
+#input_alt{
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+  margin: 20px;
+  padding: 20px;
+}
+
 #input>input{
+  margin:20px;
+}
+#input_alt>input{
   margin:20px;
 }
 
